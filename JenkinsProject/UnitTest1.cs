@@ -36,5 +36,6 @@ namespace JenkinsProject
             _homePage.BudgetMax(_driver).SendKeys("700");
             _homePage.Rechercher(_driver).Click();
         }
+        //ok
     }
 }
