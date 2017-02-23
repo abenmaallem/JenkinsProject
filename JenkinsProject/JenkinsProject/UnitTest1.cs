@@ -34,7 +34,7 @@ namespace JenkinsProject
             _homePage.SaisieVille(_driver).SendKeys("Paris");
             _homePage.BudgetMax(_driver).Clear();
             _homePage.BudgetMax(_driver).SendKeys("700");
-            _homePage.Rechercher(_driver).Click();
+            //_homePage.Rechercher(_driver).Click();
         }
     }
 }
