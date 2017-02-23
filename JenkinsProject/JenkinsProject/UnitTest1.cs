@@ -1,18 +1,40 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using NUnit.Framework;
+using OpenQA.Selenium.Firefox;
 
-namespace JenkinsProject
+namespace TestJenkins
 {
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
+        IWebDriver _driver;
+        HomePage _homePage;
+
+        [SetUp]
+        public void TestFirefox()
+        {
+            _homePage = new HomePage();
+            _driver = new FirefoxDriver();
+            _driver.Navigate().GoToUrl("http://www.seloger.com");
+        }
+
+        [TearDown]
+        public void ApresLeTest()
+        {
+            _driver.Quit();
+        }
+
+        [Test]
         public void TestMethod1()
         {
-            bool ok;
-            if (ok = true){
-
-            }
+            _homePage.Louer(_driver).Click();
+            _homePage.SaisieVille(_driver).Clear();
+            _homePage.SaisieVille(_driver).SendKeys("Paris");
+            _homePage.BudgetMax(_driver).Clear();
+            _homePage.BudgetMax(_driver).SendKeys("700");
+            _homePage.Rechercher(_driver).Click();
         }
     }
 }
