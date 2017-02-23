@@ -9,6 +9,10 @@ namespace JenkinsProject
         [TestMethod]
         public void TestMethod1()
         {
+            bool ok;
+            if (ok = true){
+
+            }
         }
     }
 }
