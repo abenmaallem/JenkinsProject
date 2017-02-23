@@ -30,6 +30,7 @@ namespace JenkinsProject
         public void TestMethod1()
         {
             _homePage.Louer(_driver).Click();
+            //ok
             _homePage.SaisieVille(_driver).Clear();
             _homePage.SaisieVille(_driver).SendKeys("Paris");
             _homePage.BudgetMax(_driver).Clear();
