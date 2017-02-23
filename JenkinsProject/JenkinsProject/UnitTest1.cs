@@ -3,11 +3,11 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using NUnit.Framework;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Chrome;
 
-namespace TestJenkins
+namespace JenkinsProject
 {
-    [TestClass]
-    public class UnitTest1
+    class UnitTest1
     {
         IWebDriver _driver;
         HomePage _homePage;
@@ -20,11 +20,11 @@ namespace TestJenkins
             _driver.Navigate().GoToUrl("http://www.seloger.com");
         }
 
-        [TearDown]
-        public void ApresLeTest()
-        {
-            _driver.Quit();
-        }
+        //[TearDown]
+        //public void ApresLeTest()
+        //{
+        //    _driver.Quit();
+        //}
 
         [Test]
         public void TestMethod1()

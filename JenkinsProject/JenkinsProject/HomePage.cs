@@ -1,15 +1,15 @@
 ﻿using OpenQA.Selenium;
 using System;
 
-namespace TestJenkins
+namespace JenkinsProject
 {
-    class HomePage
+    public class HomePage
     {
 
         public IWebElement Louer(IWebDriver _driver)
         {
             _driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
-            return _driver.FindElement(By.CssSelector(".on > a:nth-child(1)"));
+            return _driver.FindElement(By.CssSelector(".c-quest-tabs > ul:nth-child(1) > li:nth-child(1) > a:nth-child(1)"));
         }
 
         public IWebElement SaisieVille(IWebDriver _driver)
