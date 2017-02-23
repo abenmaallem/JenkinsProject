@@ -29,5 +29,6 @@ namespace JenkinsProject
             //_driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
             return _driver.FindElement(By.CssSelector("#i-quest-panel-2 > div:nth-child(2) > a:nth-child(1)"));
         }
+        //ok
     }
 }
